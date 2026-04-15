@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-macaron-pink: #FFB7B2;
+  --color-macaron-mint: #B2E2F2;
+  --color-macaron-yellow: #FFFFD1;
+  --color-macaron-lavender: #E0BBE4;
+  --color-macaron-peach: #FFDAC1;
+  --color-macaron-green: #C7CEEA;
+}
+
+@layer base {
+  body {
+    @apply bg-macaron-mint text-slate-800 antialiased overflow-hidden;
+  }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out 0s 2;
+}
